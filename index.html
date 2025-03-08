@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Feature INJECTOR Free Fire</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif; /* Mengatur font */
+            background-color: #ea0101; /* Warna latar belakang */
+            margin: 0; /* Menghilangkan margin default */
+            padding: 20px; /* Ruang di dalam body */
+        }
+
+        .container {
+            background-color: white; /* Warna latar belakang kontainer */
+            padding: 20px; /* Ruang di dalam kontainer */
+            border-radius: 5px; /* Sudut melengkung */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Bayangan */
+            max-width: 600px; /* Lebar maksimum kontainer */
+            margin: auto; /* Memusatkan kontainer */
+        }
+
+        h1 {
+            text-align: center; /* Memusatkan teks judul */
+        }
+
+        nav ul {
+            list-style-type: none; /* Menghilangkan bullet pada list */
+            padding: 0; /* Menghilangkan padding default */
+        }
+
+        nav li {
+            margin: 15px 0; /* Jarak antara item list */
+            display: flex; /* Menggunakan flexbox untuk item list */
+            align-items: center; /* Memusatkan secara vertikal */
+        }
+
+        input[type="checkbox"] {
+            margin-left: 10px; /* Jarak antara label dan checkbox */
+        }
+
+        input[type="range"] {
+            margin-left: 10px; /* Jarak antara label dan range input */
+            width: 100%; /* Lebar penuh */
+        }
+
+        .status {
+            margin-left: 10px; /* Jarak antara checkbox dan status */
+            font-weight: bold; /* Menebalkan teks status */
+            color: green; /* Warna teks status */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Selamat Datang Di Halaman Feature INJECTOR Free Fire</h1>
+        <nav>
+            <ul>
+                <li>Aim FOV<input type="checkbox" id="aim-fov"><span class="status" id="status-aim-fov"></span></li>
+                <li>Aim Bot<input type="checkbox" id="aim-bot"><span class="status" id="status-aim-bot"></span></li>
+                <li>Aim Accuracy<input type="checkbox" id="aim-accuracy"><span class="status" id="status-aim-accuracy"></span></li>
+                <li>Aim Lock<input type="checkbox" id="aim-lock"><span class="status" id="status-aim-lock"></span></li>
+                <li>Sensitivity<input type="range" min="0" max="100" value="50" id="sensitivity"></li>
+            </ul>
+        </nav>
+    </div>
+
+    <script>
+        // Fungsi untuk mengupdate status checkbox
+        function updateStatus(checkboxId, statusId) {
+            const checkbox = document.getElementById(checkboxId);
+            const status = document.getElementById(statusId);
+            status.textContent = checkbox.checked ? 'Aktif' : ''; // Menampilkan 'Aktif' jika dicentang
+        }
+
+        // Menambahkan event listener untuk setiap checkbox
+        document.getElementById('aim-fov').addEventListener('change', function() {
+            updateStatus('aim-fov', 'status-aim-fov');
+            // Logika untuk Aim FOV
+            if (this.checked) {
+                console.log("Aim FOV diaktifkan");
+                // Tambahkan kode untuk mengaktifkan Aim FOV
+            } else {
+                console.log("Aim FOV dinonaktifkan");
+                // Tambahkan kode untuk menonaktifkan Aim FOV
+            }
+        });
+
+        document.getElementById('aim-bot').addEventListener('change', function() {
+            updateStatus('aim-bot', 'status-aim-bot');
+            // Logika untuk Aim Bot
+            if (this.checked) {
+                console.log("Aim Bot diaktifkan");
+                // Tambahkan kode untuk meng
